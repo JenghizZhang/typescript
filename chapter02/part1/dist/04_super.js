@@ -16,7 +16,7 @@
         }
         sayHello() {
             // 在类的方法中 super就表示当前类的父类
-            //super.sayHello();
+            super.sayHello();
             console.log('汪汪汪汪！');
         }
     }

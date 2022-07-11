@@ -43,15 +43,21 @@
     *   实现接口就是使类满足接口的要求
     * */
     class MyClass implements myInter{
-        name: string;
+        get name(): string {
+            return this._name;
+        }
+        private readonly _name: string;
 
         constructor(name: string) {
-            this.name = name;
+            this._name = name;
         }
 
         sayHello(){
             console.log('大家好~~');
         }
+
+        private _age: number | undefined;
+        private _gender: string | undefined;
 
     }
 
