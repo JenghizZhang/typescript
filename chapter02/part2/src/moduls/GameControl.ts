@@ -65,21 +65,29 @@ class GameControl {
         switch (this.direction) {
             case "ArrowUp":
             case "Up":
+            case "w":
+            case "W":
                 // 向上移动 top 减少
                 Y -= 10;
                 break;
             case "ArrowDown":
             case "Down":
+            case "s":
+            case "S":
                 // 向下移动 top 增加
                 Y += 10;
                 break;
             case "ArrowLeft":
             case "Left":
+            case "a":
+            case "A":
                 // 向左移动 left 减少
                 X -= 10;
                 break;
             case "ArrowRight":
             case "Right":
+            case "d":
+            case "D":
                 // 向右移动 left 增加
                 X += 10;
                 break;
@@ -92,7 +100,7 @@ class GameControl {
         try{
             this.snake.X = X;
             this.snake.Y = Y;
-        }catch (e){
+        }catch (e:any){
             // 进入到catch，说明出现了异常，游戏结束，弹出一个提示信息
             alert(e.message+' GAME OVER!');
             // 将isLive设置为false
